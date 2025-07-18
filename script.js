@@ -1,10 +1,7 @@
-//your JS code here. If required.
 let angle = 0;
+let line = document.getElementById("line");
 
-function rotateLine() {
-  const line = document.getElementById("line");
-  angle = (angle + 2) % 360;
-  line.style.transform = rotate(${angle}deg);
-}
-
-setInterval(rotateLine, 20);
+setInterval(function () {
+  angle += 2;
+  line.style.transform = "rotate(" + angle + "deg)";
+}, 20);
